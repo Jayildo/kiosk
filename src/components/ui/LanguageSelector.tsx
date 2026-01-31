@@ -34,7 +34,7 @@ export default function LanguageSelector() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 text-white text-sm font-medium transition-colors"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sand-100 hover:bg-sand-200 text-gray-700 text-sm font-bold transition-all border-2 border-sand-200 btn-bounce"
         aria-label="Select language"
       >
         <span>{current.flag}</span>
@@ -45,13 +45,13 @@ export default function LanguageSelector() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-1 bg-white rounded-lg shadow-lg border border-gray-200 py-1 min-w-[140px] z-50">
+        <div className="absolute right-0 top-full mt-2 bg-white rounded-2xl shadow-lg border-2 border-sand-200 py-2 min-w-[150px] z-50">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => changeLanguage(lang.code)}
-              className={`w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-50 transition-colors ${
-                lang.code === i18n.language ? 'text-blue-600 font-medium' : 'text-gray-700'
+              className={`w-full flex items-center gap-2.5 px-4 py-2.5 text-sm hover:bg-sand-50 transition-colors ${
+                lang.code === i18n.language ? 'text-duo-500 font-bold bg-duo-50' : 'text-gray-700 font-medium'
               }`}
             >
               <span>{lang.flag}</span>

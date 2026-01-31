@@ -52,7 +52,7 @@ export default function DownloadButton({ storeLinks, deepLinks, isInstalled }: D
       <div className="flex flex-wrap gap-2">
         <a
           href={intentUrl}
-          className="inline-flex items-center gap-1.5 px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-500 transition-colors"
+          className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-duo-400 text-white rounded-xl text-sm font-bold btn-duo border-b-4 border-duo-600 hover:bg-duo-500 transition-colors"
         >
           <OpenIcon />
           {t('installed.openApp')}
@@ -67,7 +67,7 @@ export default function DownloadButton({ storeLinks, deepLinks, isInstalled }: D
         href={storeLinks.ios}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors"
+        className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-gray-800 text-white rounded-xl text-sm font-bold btn-duo border-b-4 border-gray-900 hover:bg-gray-700 transition-colors"
       >
         <AppleIcon />
         {t('download.getOnAppStore')}
@@ -81,7 +81,7 @@ export default function DownloadButton({ storeLinks, deepLinks, isInstalled }: D
         href={storeLinks.android}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-500 transition-colors"
+        className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-duo-400 text-white rounded-xl text-sm font-bold btn-duo border-b-4 border-duo-600 hover:bg-duo-500 transition-colors"
       >
         <PlayStoreIcon />
         {t('download.getOnPlayStore')}
@@ -96,7 +96,7 @@ export default function DownloadButton({ storeLinks, deepLinks, isInstalled }: D
         href={storeLinks.ios}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-900 text-white rounded-lg text-xs font-medium hover:bg-gray-700 transition-colors"
+        className="inline-flex items-center gap-1.5 px-3 py-2 bg-gray-800 text-white rounded-xl text-xs font-bold btn-duo border-b-[3px] border-gray-900 hover:bg-gray-700 transition-colors"
       >
         <AppleIcon />
         {t('download.getOnAppStore')}
@@ -105,7 +105,7 @@ export default function DownloadButton({ storeLinks, deepLinks, isInstalled }: D
         href={storeLinks.android}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-600 text-white rounded-lg text-xs font-medium hover:bg-green-500 transition-colors"
+        className="inline-flex items-center gap-1.5 px-3 py-2 bg-duo-400 text-white rounded-xl text-xs font-bold btn-duo border-b-[3px] border-duo-600 hover:bg-duo-500 transition-colors"
       >
         <PlayStoreIcon />
         {t('download.getOnPlayStore')}
@@ -115,7 +115,7 @@ export default function DownloadButton({ storeLinks, deepLinks, isInstalled }: D
           href={storeLinks.web}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-lg text-xs font-medium hover:bg-blue-500 transition-colors"
+          className="inline-flex items-center gap-1.5 px-3 py-2 bg-sky-400 text-white rounded-xl text-xs font-bold btn-duo border-b-[3px] border-sky-300 hover:bg-sky-300 transition-colors"
         >
           {t('download.visitWebsite')}
         </a>

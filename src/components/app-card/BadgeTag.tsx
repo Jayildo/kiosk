@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next';
 import type { BadgeType } from '../../types/app';
 
 const badgeStyles: Record<BadgeType, string> = {
-  government: 'bg-blue-100 text-blue-800',
-  'local-essential': 'bg-green-100 text-green-800',
-  'foreigner-friendly': 'bg-purple-100 text-purple-800',
+  government: 'bg-sky-100 text-sky-400 border border-sky-200',
+  'local-essential': 'bg-duo-100 text-duo-600 border border-duo-200',
+  'foreigner-friendly': 'bg-soft-purple-100 text-soft-purple-400 border border-soft-purple-200',
 };
 
 interface BadgeTagProps {
@@ -21,7 +21,7 @@ export default function BadgeTag({ badges }: BadgeTagProps) {
       {badges.map((badge) => (
         <span
           key={badge}
-          className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${badgeStyles[badge]}`}
+          className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold badge-pop ${badgeStyles[badge]}`}
         >
           {t(`badges.${badge}`)}
         </span>

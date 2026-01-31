@@ -37,16 +37,16 @@ export default function CategoryNav({ categories }: CategoryNavProps) {
   };
 
   return (
-    <nav className="sticky top-0 z-30 bg-white/90 backdrop-blur-sm border-b border-gray-200 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-0 lg:px-0">
+    <nav className="sticky top-0 z-30 bg-sand-50/95 backdrop-blur-sm border-b-2 border-sand-200 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-0 lg:px-0">
       <div className="flex gap-2 overflow-x-auto py-3 scrollbar-hide">
         {categories.map((cat) => (
           <button
             key={cat.id}
             onClick={() => scrollTo(cat.id)}
-            className={`shrink-0 px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+            className={`shrink-0 px-4 py-2 rounded-xl text-sm font-bold transition-all btn-bounce ${
               activeId === cat.id
-                ? 'bg-blue-600 text-white shadow-sm'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                ? 'bg-duo-400 text-white shadow-sm border-b-[3px] border-duo-600'
+                : 'bg-white text-warm-500 border-2 border-sand-200 hover:border-duo-300 hover:text-duo-500'
             }`}
           >
             {t(cat.nameKey)}

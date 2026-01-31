@@ -24,14 +24,15 @@ export default function CategorySection({ category, apps, isInstalled, toggleIns
 
   return (
     <section id={category.id} className="scroll-mt-28">
-      <div className="mb-4">
-        <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-          <span>{categoryEmojis[category.icon] || '📱'}</span>
+      <div className="mb-5">
+        <h2 className="text-xl font-extrabold text-gray-800 flex items-center gap-2.5">
+          <span className="text-2xl">{categoryEmojis[category.icon] || '📱'}</span>
           {t(category.nameKey)}
         </h2>
-        <p className="text-sm text-gray-500 mt-1">
+        <p className="text-sm text-warm-400 mt-1.5 font-medium">
           {t(category.descriptionKey)}
         </p>
+        <div className="w-10 h-1 bg-duo-400 rounded-full mt-3" />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {apps.map((app) => (

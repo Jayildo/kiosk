@@ -15,15 +15,15 @@ export default function AppCard({ app, isInstalled, onToggleInstalled }: AppCard
 
   return (
     <div
-      className={`bg-white rounded-xl shadow-sm p-5 flex flex-col gap-3 hover:shadow-md transition-all ${
+      className={`bg-white rounded-2xl p-5 flex flex-col gap-3 card-hover ${
         isInstalled
-          ? 'border-2 border-green-300 ring-1 ring-green-100'
-          : 'border border-gray-100'
+          ? 'border-2 border-duo-400 shadow-[0_4px_0_0_theme(colors.duo.200)]'
+          : 'border-2 border-sand-200 shadow-[0_4px_0_0_theme(colors.sand.200)]'
       }`}
     >
       <div className="flex items-start gap-4">
         {/* App Icon */}
-        <div className="w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
+        <div className="w-16 h-16 rounded-2xl bg-sand-100 flex items-center justify-center shrink-0 overflow-hidden border-2 border-sand-200">
           <img
             src={app.icon}
             alt={t(app.nameKey)}
@@ -31,7 +31,7 @@ export default function AppCard({ app, isInstalled, onToggleInstalled }: AppCard
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
-              target.parentElement!.innerHTML = `<span class="text-2xl font-bold text-gray-400">${app.koreanName[0]}</span>`;
+              target.parentElement!.innerHTML = `<span class="text-2xl font-bold text-warm-400">${app.koreanName[0]}</span>`;
             }}
           />
         </div>
@@ -39,14 +39,14 @@ export default function AppCard({ app, isInstalled, onToggleInstalled }: AppCard
         {/* App Info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline gap-2 flex-wrap">
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-lg font-extrabold text-gray-800">
               {t(app.nameKey)}
             </h3>
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-sand-300 font-medium">
               {app.koreanName}
             </span>
           </div>
-          <p className="text-xs text-blue-600 font-medium mt-0.5">
+          <p className="text-xs text-duo-500 font-semibold mt-0.5">
             {t(app.taglineKey)}
           </p>
         </div>
@@ -54,10 +54,10 @@ export default function AppCard({ app, isInstalled, onToggleInstalled }: AppCard
         {/* Installed Toggle */}
         <button
           onClick={onToggleInstalled}
-          className={`shrink-0 flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors ${
+          className={`shrink-0 flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all btn-bounce ${
             isInstalled
-              ? 'bg-green-100 text-green-700 hover:bg-green-200'
-              : 'bg-gray-50 text-gray-400 hover:bg-gray-100 hover:text-gray-600'
+              ? 'bg-duo-100 text-duo-600 border-2 border-duo-300 hover:bg-duo-200'
+              : 'bg-sand-100 text-sand-300 border-2 border-sand-200 hover:bg-sand-200 hover:text-warm-500'
           }`}
           title={tc('installed.markInstalled')}
         >
@@ -77,7 +77,7 @@ export default function AppCard({ app, isInstalled, onToggleInstalled }: AppCard
       </div>
 
       {/* Description */}
-      <p className="text-sm text-gray-600 leading-relaxed">
+      <p className="text-sm text-warm-500 leading-relaxed">
         {t(app.descriptionKey)}
       </p>
 
