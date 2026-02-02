@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Duolingo-inspired design system */
 @theme {
   /* Warm tone palette - Duolingo inspired */
   --color-warm-50: #FFF8F0;
